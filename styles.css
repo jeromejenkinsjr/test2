@@ -1,0 +1,42 @@
+.item {
+	width: 70px; /* or any custom size */
+}
+.item p {
+	font-size: 20px;
+}
+
+.highlight {
+	color: blue;
+	/* Ensure it's inline */
+	display: inline;
+	/* Reset any unintended margins or padding */
+	margin: 0;
+	padding: 0;
+}
+
+a.highlight {
+	text-decoration: underline;
+}
+
+.carousel-inner {
+	overflow: hidden; /* Prevents overflow of items */
+}
+
+.carousel-item {
+	height: 500px; /* Set a consistent height for the carousel */
+	display: flex; /* Use flexbox to center the image */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+	opacity: 0; /* Start items as invisible */
+	transition: opacity 0.5s ease; /* Add transition for smooth fading */
+}
+
+.carousel-item.active {
+	opacity: 1; /* Make active item visible */
+}
+
+.carousel-img {
+	max-width: 80%; /* Set a max width for the images */
+	max-height: 100%; /* Ensure images don't exceed carousel height */
+	object-fit: contain; /* Keep aspect ratio while fitting within max dimensions */
+}
